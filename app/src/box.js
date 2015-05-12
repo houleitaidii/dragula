@@ -15,6 +15,10 @@ var JiraBox = React.createClass({
 		// 	}.bind(this)
 		// });
 		var api = restful('54.213.55.78').protocol('http').port(3000);
+		var gitTitleCollection = api.one('git', 'VTWO-180');
+		gitTitleCollection.get().then(function(response){
+			var git_pull_request
+		});
 	},
 	componentDidMount: function(){
 		this.loadDataFromServer();

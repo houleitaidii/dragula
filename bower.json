@@ -16,6 +16,7 @@
     "dragula.js": "~1.6.0",
     "react": "~0.13.2",
     "jquery": "~2.1.4",
-    "restful.js": "~0.6.1"
+    "restful.js": "~0.6.1",
+    "momentjs": "~2.10.2"
   }
 }
