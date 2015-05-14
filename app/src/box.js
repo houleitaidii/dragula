@@ -1,24 +1,25 @@
 var JiraBox = React.createClass({
-	getInitalState: function(){
+	getInitialState: function(){
 		return {data: []};
 	},
 	loadDataFromServer: function() {
-		// $.ajax({
-		// 	url: this.props.url,
-		// 	dataType: 'json',
-		// 	type: 'GET',
-		// 	success: function(data){
-		// 		this.setState({data:data});
-		// 	}.bind(this),
-		// 	error: function(xhr, status, err){
-		// 		console.error(this.props.url, status, err.toString());
-		// 	}.bind(this)
-		// });
-		var api = restful('54.213.55.78').protocol('http').port(3000);
-		var gitTitleCollection = api.one('git', 'VTWO-180');
-		gitTitleCollection.get().then(function(response){
-			var git_pull_request
-		});
+		var api = restful("54.213.55.78").port(3000);
+		var pulls = api.all("pulls");
+		var pullEntity_array = 
+			(function(){
+				var pullEntity_array = [];
+				pulls.getAll().then(function(response){
+				  var pullEntity = response.body();
+				  for(var i=0;i<pullEntity.length;i++){
+					  var pull_data = pullEntity[i].data();
+					  pullEntity_array.push(pull_data);
+					  if(i>10){
+					  break;}
+				  };
+				  return pullEntity_array;
+				});
+			})();
+		this.setState({data:pullEntity_array});
 	},
 	componentDidMount: function(){
 		this.loadDataFromServer();
@@ -34,6 +35,6 @@ var JiraBox = React.createClass({
 });
 
 React.render(
-	<JiraBox url="http://54.213.55.78:3000/git/pull/log/?jira=VTWO-180" pollInterval={2000}/>,
+	<JiraBox />,
 	document.getElementById('jiraBox')
 );
