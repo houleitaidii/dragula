@@ -5,21 +5,18 @@ var JiraBox = React.createClass({displayName: "JiraBox",
 	loadDataFromServer: function() {
 		var api = restful("54.213.55.78").port(3000);
 		var pulls = api.all("pulls");
-		var pullEntity_array = 
-			(function(){
-				var pullEntity_array = [];
-				pulls.getAll().then(function(response){
-				  var pullEntity = response.body();
-				  for(var i=0;i<pullEntity.length;i++){
-					  var pull_data = pullEntity[i].data();
-					  pullEntity_array.push(pull_data);
-					  if(i>10){
-					  break;}
-				  };
-				  return pullEntity_array;
-				});
-			})();
-		this.setState({data:pullEntity_array});
+		var box = this;
+		var pullEntity_array = [];
+		pulls.getAll().then(function(response){
+		  var pullEntity = response.body();
+		  for(var i=0;i<pullEntity.length;i++){
+			  var pull_data = pullEntity[i].data();
+			  pullEntity_array.push(pull_data);
+			  if(i>10){
+			  break;}
+		  };
+		  box.setState({data:pullEntity_array});
+		});
 	},
 	componentDidMount: function(){
 		this.loadDataFromServer();
@@ -28,7 +25,7 @@ var JiraBox = React.createClass({displayName: "JiraBox",
 	render: function(){
 		return (
 			React.createElement("div", {className: "box"}, 
-				"Hello"
+				React.createElement(JiraList, {data: this.state.data})
 			)
 		);
 	}
