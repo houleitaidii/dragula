@@ -12,8 +12,8 @@ var JiraBox = React.createClass({displayName: "JiraBox",
 		  for(var i=0;i<pullEntity.length;i++){
 			  var pull_data = pullEntity[i].data();
 			  pullEntity_array.push(pull_data);
-			  if(i>10){
-			  break;}
+//			  if(i>10){
+//			  break;}
 		  };
 		  box.setState({data:pullEntity_array});
 		});
