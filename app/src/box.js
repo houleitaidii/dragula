@@ -7,7 +7,7 @@ var JiraBox = React.createClass({
 		var pulls = api.all("pulls");
 		var box = this;
 		var pullEntity_array = [];
-		pulls.getAll().then(function(response){
+		pulls.getAll({page:1}).then(function(response){
 		  var pullEntity = response.body();
 		  for(var i=0;i<pullEntity.length;i++){
 			  var pull_data = pullEntity[i].data();
@@ -21,6 +21,7 @@ var JiraBox = React.createClass({
 	componentDidMount: function(){
 		this.loadDataFromServer();
 //		setInterval(this.loadDataFromServer, this.props.pollInterval);
+		$(".progress").hide();
 	},
 	render: function(){
 		return (
