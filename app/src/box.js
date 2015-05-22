@@ -10,8 +10,10 @@ var LoadMore = React.createClass({
 	},
 	render: function(){
 		return (
-			<div>
-				<a value={this.props.page} ref="page" onClick={this.handleClick} className="waves-effect waves-light btn" />
+			<div className="fixed-action-btn" style={{bottom: '24px',right: '24px'}}>
+				<a className="btn-floating btn-large waves-effect waves-light red" value={this.props.page} ref="page" onClick={this.handleClick}>
+			      <i className="large mdi-navigation-more-horiz"></i>
+			    </a>
 			</div>
 		);
 	}

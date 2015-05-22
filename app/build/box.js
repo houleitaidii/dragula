@@ -10,8 +10,10 @@ var LoadMore = React.createClass({displayName: "LoadMore",
 	},
 	render: function(){
 		return (
-			React.createElement("div", null, 
-				React.createElement("a", {value: this.props.page, ref: "page", onClick: this.handleClick, className: "waves-effect waves-light btn"})
+			React.createElement("div", {className: "fixed-action-btn", style: {bottom: '24px',right: '24px'}}, 
+				React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light red", value: this.props.page, ref: "page", onClick: this.handleClick}, 
+			      React.createElement("i", {className: "large mdi-navigation-more-horiz"})
+			    )
 			)
 		);
 	}
