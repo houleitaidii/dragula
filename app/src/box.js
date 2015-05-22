@@ -1,6 +1,7 @@
 var LoadMore = React.createClass({
 	handleClick: function(event){
-		var page = this.refs.page.getDOMNode().value.trim();
+		// var page = this.refs.page.getDOMNode().value.trim();
+		var page = this.refs.page.props.value;
 		var page = parseInt(page);
 		page = page + 1;
 		this.refs.page.getDOMNode().value = page;
@@ -10,7 +11,7 @@ var LoadMore = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<input type="button" name="loadmore" value={this.props.page} ref="page" onClick={this.handleClick} />
+				<a value={this.props.page} ref="page" onClick={this.handleClick} className="waves-effect waves-light btn" />
 			</div>
 		);
 	}
