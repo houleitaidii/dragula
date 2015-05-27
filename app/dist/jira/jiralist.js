@@ -1,0 +1,1 @@
+var JiraList=React.createClass({displayName:"JiraList",render:function(){var e=this.props.data.map(function(e){return React.createElement(JiraItem,{itemData:e})});return React.createElement("div",{className:"list"},React.createElement("ul",{className:"collection"},e))}});
