@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     jshint = require('gulp-jshint'),
+    del = require('del'),
     concat = require('gulp-concat');
 
 gulp.task('minify', function(){
@@ -22,6 +23,10 @@ gulp.task('concatjira', function(){
 		.pipe(gulp.dest('app/dist/jira/'));
 });
 
-gulp.task('default', function(){
+gulp.task('clean', function(cb){
+	del(['app/dist'], cb);
+});
+
+gulp.task('default', ['clean'], function(){
 	gulp.start(['minify', 'concatjira']);
 });
