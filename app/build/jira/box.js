@@ -22,7 +22,7 @@ var LoadMore = React.createClass({displayName: "LoadMore",
 
 var JiraBox = React.createClass({displayName: "JiraBox",
 	getInitialState: function(){
-		return {data: [], incr_data:[], page: 1};
+		return {data: [], incr_data:[], page: 0};
 	},
 	loadDataFromServer: function() {
 		$(".progress").show();

@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     concat = require('gulp-concat');
 
-
 gulp.task('minify', function(){
 	gulp.src('app/build/jira/*.js')
 		.pipe(uglify())
@@ -21,4 +20,8 @@ gulp.task('concatjira', function(){
 		.pipe(uglify())
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest('app/dist/jira/'));
+});
+
+gulp.task('default', function(){
+	gulp.start(['minify', 'concatjira']);
 });
