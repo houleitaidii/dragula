@@ -19,6 +19,7 @@
     "restful.js": "~0.6.1",
     "momentjs": "~2.10.2",
     "materialize": "~0.96.1",
-    "octicons": "~2.2.2"
+    "octicons": "~2.2.2",
+    "react-router": "~0.13.3"
   }
 }
