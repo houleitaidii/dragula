@@ -1,0 +1,742 @@
+<!DOCTYPE html><html>
+
+<head>
+<meta charset="utf-8">
+<title>20150612</title>
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+</head>
+<body>
+<h1 id="toc_0">Taidii Sprint Mid June release Note</h1>
+
+<hr>
+
+<h3 id="toc_1">What&#39;s New:</h3>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-297">VTWO-297</a>: Multiple calendars for the homepage</li>
+</ul>
+
+<blockquote>
+<p>Purpose:
+Homepage calendar with different colours for different functions
+Use case:
+Login to account --&gt; calendar --&gt; click to add event --&gt; key in event type and details --&gt; save
+Different event type with different colours</p>
+
+<p>在dashboard页面上的Calendar给event显示不同的颜色, 用于区分开Birthday和Event.</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Principal/Teacher</p>
+
+<p><strong>Components</strong>: Dashboard</p>
+
+<p><strong>Client</strong>: Agape</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-293">VTWO-293</a>: default permission setting for staff account</li>
+</ul>
+
+<blockquote>
+<p>Purpose:
+Easy setting for admin to set up staff account
+Use case testing:
+save new staff --&gt; settings --&gt; access rights --&gt; have three types to choose from
+1) teacher
+2) admin
+3) principal/ VP
+selecting different rights will give different access rights to the user</p>
+
+<p>学校里角色不同的老师有不同的权限，有一些是admin会参与管理的工作，有一些是教学老师，所以不同的staff默认应该有不同的权限。当新添加一个staff权限的时候，可以通过设置这个staff的角色(1.Teacher 2.Admin 3.Principal/VP)，默认给staff一些不同的权限。</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Principal</p>
+
+<p><strong>Components</strong>: Settings/Access Right</p>
+
+<p><strong>Client</strong>: Agape</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-292">VTWO-292</a>: page sequence after creating staff account</li>
+</ul>
+
+<blockquote>
+<p>Purpose:
+ - Provide the sequence for users to do the necessary settings for staff account after it&#39;s created
+Use case testing:
+ - save new staff --&gt; class setting --&gt; access rights --&gt; staff module view</p>
+
+<p>新添加一个staff点击Save后会自动先跳转到设置教师班级的页面，在这个页面点击Save后会自动跳转到设置Access Right的页面，优化了新添加staff的操作流程。</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Principal</p>
+
+<p><strong>Components</strong>: Staffs/Settings-Teacher Assignment/Settings-Access Right</p>
+
+<p><strong>Client</strong>: Agape</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-198">VTWO-198</a>: Adding class filter to receipts tab</li>
+</ul>
+
+<blockquote>
+<p>Filters in finance module is currently inconsistent:</p>
+
+<ol>
+<li>can&#39;t filter by class on receipts</li>
+<li>Can&#39;t filter by class on credit notes</li>
+<li>can only search by Ic number on receipts (need the same for invoice and credit notes)</li>
+</ol>
+
+<p>Request to standardise filter feature in all parts of finance modules </p>
+
+<p>在receipts和credit notes添加通过class的查询条件。</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Finance Staff</p>
+
+<p><strong>Components</strong>: Finance</p>
+
+<p><strong>Client</strong>: Agape</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-311">VTWO-311</a>: Export staff leave</li>
+</ul>
+
+<blockquote>
+<p>purpose: reference of staff leave for payroll matters
+feature use case scenario: login to account --&gt; staff attendance --&gt; leave --&gt; export summary --&gt; data table exported in excel format (see ppt attached)</p>
+
+<p>导出staff的请假纪录报表。</p>
+
+<blockquote>
+<p><strong>Affected user</strong>: Principal/Teacher</p>
+
+<p><strong>Components</strong>: Staff Attendance</p>
+
+<p><strong>Client</strong>: Agape</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-295">VTWO-295</a>: allow users to save staff training records</li>
+</ul>
+
+<blockquote>
+<p>Purpose:
+Provide storage space for users to save staff records on Taidii
+Use case:
+Staff --&gt; training records --&gt; add record</p>
+
+<p>可以让staff添加培训记录</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Principal/Teacher</p>
+
+<p><strong>Components</strong>: Staffs</p>
+
+<p><strong>Client</strong>: Agape</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-298">VTWO-298</a>: notification for teachers on their leave application</li>
+</ul>
+
+<blockquote>
+<p>Purpose:
+notify staff that their leave application has been approved or rejected
+Use case test:
+login with account --&gt; homepage shows notification if principal or supervisor has approved or rejected leave</p>
+
+<p>当staff申请的请假被校长approve后，staff可以在dashboard页面看到通知消息。</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Teacher</p>
+
+<p><strong>Components</strong>: Staffs/Dashboard</p>
+
+<p><strong>Client</strong>: Agape</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-310">VTWO-310</a>: Approved leave should not be deleted</li>
+</ul>
+
+<blockquote>
+<p>Current situation:
+login to account --&gt; staff attendance --&gt; leave --&gt; select approved leave --&gt; delete --&gt; leave is deleted
+Customer requirements:
+login to account --&gt; staff attendance --&gt; leave --&gt; select approved leave --&gt; delete --&gt; approved leave cannot be deleted, but you can void with reason (see design attached)</p>
+
+<p>已经Approved/Rejected的请假，如果请假的开始日期超过当前日期，那么就不允许删除</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Teacher</p>
+
+<p><strong>Components</strong>: Staff Attendance</p>
+
+<p><strong>Client</strong>: Agape</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-294">VTWO-294</a>: Allow for rehiring of staff after resignation</li>
+</ul>
+
+<blockquote>
+<p>Purpose:
+Current rehire of resigned staff is not clear. To make the feature clear by having a re-hire button.
+Use case test:
+staff --&gt; resigned --&gt; click rehire --&gt; staff form --&gt; active</p>
+
+<p>在Staff Profile页面可以resign在职的staff，也可以在rehire已经离职到staff</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Principal/Teacher</p>
+
+<p><strong>Components</strong>: Staffs</p>
+
+<p><strong>Client</strong>: Agape</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-158">VTWO-158</a>: Fingerprint synchronization between 2 and more terminals</li>
+</ul>
+
+<blockquote>
+<p>Sync fingerprint data between 2 or more all-in-one machines in EXE</p>
+
+<p>一个学校配备了多于一台的一体机，同步指纹的功能可以使家长只需要在一台一体机上录指纹，然后可以在所有动一体机上扫描指纹签到签出。</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Parent</p>
+
+<p><strong>Components</strong>: EXE software</p>
+
+<p><strong>Client</strong>: Posso</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-152">VTWO-152</a>: Carpe Diem SW: Add more field information for Staff Profile</li>
+</ul>
+
+<blockquote>
+<p>Add 3 new fields in staff profile, Application Date/Expired Date/First Aid Expiry Date.</p>
+
+<p>在staff profile添加三个新字段: Application Date/Expired Date/First Aid Expiry Date</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Staff</p>
+
+<p><strong>Components</strong>: Staff</p>
+
+<p><strong>Client</strong>: Carpe Diem</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-119">VTWO-119</a>: Dropdown list to combine multiple classes for each subject</li>
+</ul>
+
+<blockquote>
+<p>when create lession plan(V3), enable user to select multiple classes</p>
+
+<p>在lession plan(V3)创建新记录时，可以一次选择多个班级</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Staff</p>
+
+<p><strong>Components</strong>: Lesson Plan V3</p>
+
+<p><strong>Client</strong>: Posso</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-118">VTWO-118</a>: Must have notification when creating duplicate subject</li>
+</ul>
+
+<blockquote>
+<p>when create lession plan(V3), the duplicate subject cannot be created.</p>
+
+<p>在lession plan(V3)创建新记录时，不能创建重复记录</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Staff</p>
+
+<p><strong>Components</strong>: Lesson Plan V3</p>
+
+<p><strong>Client</strong>: Posso</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><a href="http://jira.taidii.cn/browse/VTWO-162">VTWO-162</a>: Keep the original file name when display on v2 (Staff Attendance and Lesson Plan v3)</li>
+</ul>
+
+<blockquote>
+<p>keep displaying original file name for attachements for Attendance Leave and Lession Plan V3.</p>
+
+<p>在请假和lession plan V3里的附件，显示附件原始的名字。</p>
+
+<blockquote>
+<p><strong>Affected User</strong>: Staff</p>
+
+<p><strong>Components</strong>: Staff Attendance(Leave) / Lession Plan V3</p>
+
+<p><strong>Client</strong>: Posso</p>
+</blockquote>
+</blockquote>
+
+<script type="text/javascript">
+self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{};var Prism=function(){var e=/\blang(?:uage)?-(?!\*)(\w+)\b/i,t=self.Prism={util:{encode:function(e){return e instanceof n?new n(e.type,t.util.encode(e.content),e.alias):"Array"===t.util.type(e)?e.map(t.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},clone:function(e){var n=t.util.type(e);switch(n){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=t.util.clone(e[r]));return a;case"Array":return e.map(function(e){return t.util.clone(e)})}return e}},languages:{extend:function(e,n){var a=t.util.clone(t.languages[e]);for(var r in n)a[r]=n[r];return a},insertBefore:function(e,n,a,r){r=r||t.languages;var i=r[e];if(2==arguments.length){a=arguments[1];for(var l in a)a.hasOwnProperty(l)&&(i[l]=a[l]);return i}var s={};for(var o in i)if(i.hasOwnProperty(o)){if(o==n)for(var l in a)a.hasOwnProperty(l)&&(s[l]=a[l]);s[o]=i[o]}return t.languages.DFS(t.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=s)}),r[e]=s},DFS:function(e,n,a){for(var r in e)e.hasOwnProperty(r)&&(n.call(e,r,e[r],a||r),"Object"===t.util.type(e[r])?t.languages.DFS(e[r],n):"Array"===t.util.type(e[r])&&t.languages.DFS(e[r],n,r))}},highlightAll:function(e,n){for(var a,r=document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),i=0;a=r[i++];)t.highlightElement(a,e===!0,n)},highlightElement:function(a,r,i){for(var l,s,o=a;o&&!e.test(o.className);)o=o.parentNode;if(o&&(l=(o.className.match(e)||[,""])[1],s=t.languages[l]),s){a.className=a.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=a.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var u=a.textContent;if(u){u=u.replace(/^(?:\r?\n|\r)/,"");var g={element:a,language:l,grammar:s,code:u};if(t.hooks.run("before-highlight",g),r&&self.Worker){var c=new Worker(t.filename);c.onmessage=function(e){g.highlightedCode=n.stringify(JSON.parse(e.data),l),t.hooks.run("before-insert",g),g.element.innerHTML=g.highlightedCode,i&&i.call(g.element),t.hooks.run("after-highlight",g)},c.postMessage(JSON.stringify({language:g.language,code:g.code}))}else g.highlightedCode=t.highlight(g.code,g.grammar,g.language),t.hooks.run("before-insert",g),g.element.innerHTML=g.highlightedCode,i&&i.call(a),t.hooks.run("after-highlight",g)}}},highlight:function(e,a,r){var i=t.tokenize(e,a);return n.stringify(t.util.encode(i),r)},tokenize:function(e,n){var a=t.Token,r=[e],i=n.rest;if(i){for(var l in i)n[l]=i[l];delete n.rest}e:for(var l in n)if(n.hasOwnProperty(l)&&n[l]){var s=n[l];s="Array"===t.util.type(s)?s:[s];for(var o=0;o<s.length;++o){var u=s[o],g=u.inside,c=!!u.lookbehind,f=0,h=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var d=r[p];if(r.length>e.length)break e;if(!(d instanceof a)){u.lastIndex=0;var m=u.exec(d);if(m){c&&(f=m[1].length);var y=m.index-1+f,m=m[0].slice(f),v=m.length,k=y+v,b=d.slice(0,y+1),w=d.slice(k+1),N=[p,1];b&&N.push(b);var O=new a(l,g?t.tokenize(m,g):m,h);N.push(O),w&&N.push(w),Array.prototype.splice.apply(r,N)}}}}}return r},hooks:{all:{},add:function(e,n){var a=t.hooks.all;a[e]=a[e]||[],a[e].push(n)},run:function(e,n){var a=t.hooks.all[e];if(a&&a.length)for(var r,i=0;r=a[i++];)r(n)}}},n=t.Token=function(e,t,n){this.type=e,this.content=t,this.alias=n};if(n.stringify=function(e,a,r){if("string"==typeof e)return e;if("Array"===t.util.type(e))return e.map(function(t){return n.stringify(t,a,e)}).join("");var i={type:e.type,content:n.stringify(e.content,a,r),tag:"span",classes:["token",e.type],attributes:{},language:a,parent:r};if("comment"==i.type&&(i.attributes.spellcheck="true"),e.alias){var l="Array"===t.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(i.classes,l)}t.hooks.run("wrap",i);var s="";for(var o in i.attributes)s+=o+'="'+(i.attributes[o]||"")+'"';return"<"+i.tag+' class="'+i.classes.join(" ")+'" '+s+">"+i.content+"</"+i.tag+">"},!self.document)return self.addEventListener?(self.addEventListener("message",function(e){var n=JSON.parse(e.data),a=n.language,r=n.code;self.postMessage(JSON.stringify(t.util.encode(t.tokenize(r,t.languages[a])))),self.close()},!1),self.Prism):self.Prism;var a=document.getElementsByTagName("script");return a=a[a.length-1],a&&(t.filename=a.src,document.addEventListener&&!a.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",t.highlightAll)),self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism);
+</script>
+</body>
+
+</html>
